@@ -2,15 +2,8 @@
 @import 'mixins';
 @import 'reset';
 @import 'colors';
-@import 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap';
 
 .app {
   font: var(--font-m);
   color: var(--primary-color);
-  font-weight: 500;
-}
-
-.content-page {
-  margin-top: px-to-rem(30px);
-  display: flex;
 }

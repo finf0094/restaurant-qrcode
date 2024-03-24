@@ -1,5 +1,7 @@
 @use 'sass:map';
 @use 'sass:color';
+@import "styles/functions";
+@import "styles/mixins";
 
 $colors: (
         'primary': var(--primary-blue),
@@ -12,6 +14,8 @@ $colors: (
 @mixin buttonColor($colorName) {
   $colorValue: map.get($colors, $colorName);
   $textColor: if($colorName == 'white', var(--primary-dark), white);
+  $hoverBackgroundColor: if($colorName == 'dark', white, $colorValue);
+  $hoverTextColor: if($colorName == 'dark', var(--primary-dark), $textColor);
 
   &.#{$colorName} {
     &.outlined,
@@ -20,8 +24,8 @@ $colors: (
       border-color: $colorValue;
 
       &:hover {
-        background-color: $colorValue;
-        color: $textColor;
+        background-color: $hoverBackgroundColor;
+        color: $hoverTextColor;
         border-color: $colorValue;
       }
     }
@@ -31,6 +35,8 @@ $colors: (
 @mixin buttonFill($colorName) {
   $colorValue: map.get($colors, $colorName);
   $textColor: if($colorName == 'white', var(--primary-dark), white);
+  $hoverBackgroundColor: if($colorName == 'dark', white, var(--primary-dark));
+  $hoverTextColor: if($colorName == 'dark', var(--primary-dark), white);
 
   &.#{$colorName} {
     &.fill {
@@ -38,8 +44,8 @@ $colors: (
       color: $textColor;
 
       &:hover {
-        background-color: var(--primary-dark);
-        color: white;
+        background-color: $hoverBackgroundColor;
+        color: $hoverTextColor;
       }
     }
   }

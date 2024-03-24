@@ -1,0 +1,41 @@
+.typography {
+    &.s {
+        font: var(--font-s);
+    }
+    &.m {
+        font: var(--font-m);
+    }
+    &.l {
+        font: var(--font-l);
+    }
+    &.xl {
+        font: var(--font-xl);
+    }
+    &.regular {
+        font-weight: 400;
+    }
+    &.medium {
+        font-weight: 500;
+    }
+    &.bold {
+        font-weight: 700;
+    }
+    &.semibold {
+        font-weight: 600;
+    }
+    &.primary {
+        color: var(--primary-blue);
+    }
+    &.success {
+        color: var(--primary-green);
+    }
+    &.error {
+        color: var(--primary-red);
+    }
+    &.dark {
+        color: var(--primary-dark);
+    }
+    &.white {
+      color: white;
+    }
+}

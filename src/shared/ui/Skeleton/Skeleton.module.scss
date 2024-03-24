@@ -1,0 +1,66 @@
+.Skeleton {
+  background: #e1e1e1;
+  border-radius: 4px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(
+                    to right,
+                    transparent 0%,
+                    #e8e8e8 50%,
+                    transparent 100%
+    );
+    animation: load 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+}
+
+@keyframes load {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+
+//.Skeleton {
+//  width: 100%;
+//  height: 50px;
+//  position: relative;
+//  background: hsl(200, 20%, 70%);
+//  overflow: hidden;
+//
+//  &::before {
+//    content: "";
+//    display: block;
+//    position: absolute;
+//    left: -150px;
+//    top: 0;
+//    height: 100%;
+//    width: 80%;
+//    background: linear-gradient(to right, transparent 0%, hsl(200, 20%, 95%) 50%, transparent 100%);
+//    animation: load 1s linear infinite alternate;
+//  }
+//}
+//
+//
+//@keyframes load {
+//  from {
+//    left: -150px;
+//  }
+//
+//  to {
+//    left: 100%;
+//  }
+//}
+

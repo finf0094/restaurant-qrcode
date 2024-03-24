@@ -1,11 +1,11 @@
 import { type FC, Suspense } from 'react'
 
-import { AppRouter } from 'app/providers/router'
+import { AppRouter } from '@/app/providers/router'
 
-import { Navbar } from 'widgets/Header'
-import { PageLoader } from 'widgets/PageLoader'
+import { Navbar } from '@/widgets/Header'
+import { PageLoader } from '@/widgets/PageLoader'
 
-import { classNames } from 'shared/lib/classNames'
+import { classNames } from '@/shared/lib/classNames'
 
 const App: FC = () => {
 

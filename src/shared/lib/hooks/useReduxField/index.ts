@@ -2,9 +2,9 @@ import { useCallback } from 'react';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector as useReduxSelector } from 'react-redux';
 
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 
-import { StateSchema } from 'app/providers/store';
+import { StateSchema } from '@/app/providers/store';
 
 export const useSelector: TypedUseSelectorHook<StateSchema> = useReduxSelector;
 

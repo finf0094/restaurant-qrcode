@@ -1,7 +1,7 @@
 import {
     type ReactNode, type FC, ButtonHTMLAttributes, memo,
 } from 'react';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from '@/shared/lib/classNames';
 import cls from './Button.module.scss';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

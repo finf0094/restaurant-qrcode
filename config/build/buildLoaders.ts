@@ -1,62 +1,63 @@
 import type webpack from 'webpack'
 import { type BuildOptions } from './types/config'
 import { buildCssLoader } from './loaders/buildCssLoader'
+import {buildBabelLoader} from "./loaders/buildBabelLoader";
 
-export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders (options: BuildOptions): webpack.RuleSetRule[] {
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
     }
 
-    const sassLoader = buildCssLoader(isDev)
-
-    const svgrLoader = {
+    const svgLoader = {
         test: /\.svg$/,
-        use: [
-            {
-                loader: '@svgr/webpack'
-            }
-        ]
-    }
-
-    const fileLoader = {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-            {
-                loader: 'file-loader'
-            }
-        ]
-    }
-
-    const babelLoader = {
-        test: /\.m?js$/,
-        exclude: /node_modules/,
-        use: {
-            loader: 'babel-loader',
+        use: [{
+            loader: '@svgr/webpack',
             options: {
-                presets: [
-                    ['@babel/preset-env', { targets: 'defaults' }],
-                    ['@babel/preset-typescript']
-                ],
-                plugins: [
-                    [
-                        'i18next-extract',
+                icon: true,
+                svgoConfig: {
+                    plugins: [
                         {
-                            locales: ['ru', 'en'],
-                            keyAsDefaultValue: true
+                            name: 'convertColors',
+                            params: {
+                                currentColor: true,
+                            }
                         }
                     ]
-                ]
+                }
             }
-        }
-    }
+        }],
+    };
+
+    const codeBabelLoader = buildBabelLoader({ ...options, isTsx: false });
+    const tsxCodeBabelLoader = buildBabelLoader({ ...options, isTsx: true });
+
+    // Если не используем тайпскрипт - нужен babel-loader
+    // const typescriptLoader = {
+    //     test: /\.tsx?$/,
+    //     use: 'ts-loader',
+    //     exclude: /node_modules/,
+    // };
+
+    const cssLoader = buildCssLoader(options.isDev);
+
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    };
+
 
     return [
-        svgrLoader,
+        svgLoader,
         fileLoader,
-        babelLoader,
-        typescriptLoader,
-        sassLoader
+        codeBabelLoader,
+        tsxCodeBabelLoader,
+        // typescriptLoader,
+        cssLoader
     ]
 }

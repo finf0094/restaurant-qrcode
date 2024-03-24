@@ -3,13 +3,13 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 
-import App from 'app/App'
+import App from '@/app/App'
 
-import { ErrorPage } from 'pages/ErrorPage'
+import { ErrorPage } from '@/pages/ErrorPage'
 
-import 'shared/config/i18n/i18n'
+import '@/shared/config/i18n/i18n'
 
-import 'app/styles/index.scss'
+import '@/app/styles/index.scss'
 
 const rootElement = document.getElementById('root')
 

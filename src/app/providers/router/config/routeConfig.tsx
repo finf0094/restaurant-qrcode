@@ -1,11 +1,11 @@
-import type { AppRoutesProps } from 'shared/types/router';
+import type { AppRoutesProps } from '@/shared/types/router';
 import {
     AppRoutes,
     getRouteMain,
-} from 'shared/const/router';
+} from '@/shared/const/router';
 
-import { MainPage } from "pages/MainPage";
-import { NotFoundPage } from "pages/NotFoundPage";
+import { MainPage } from "@/pages/MainPage";
+import { NotFoundPage } from "@/pages/NotFoundPage";
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.MAIN]: {

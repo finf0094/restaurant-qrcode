@@ -1,5 +1,5 @@
 import React, { type FC, type ReactNode } from 'react';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from '@/shared/lib/classNames';
 import styles from './Grid.module.scss';
 
 type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12

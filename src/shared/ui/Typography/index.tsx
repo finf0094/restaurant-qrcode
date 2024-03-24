@@ -1,7 +1,7 @@
 import React, {
     ReactNode, CSSProperties, memo,
 } from 'react';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from '@/shared/lib/classNames';
 import cls from './Typography.module.scss';
 
 interface TypographyProps {

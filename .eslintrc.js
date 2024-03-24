@@ -8,7 +8,6 @@ module.exports = {
         'standard-with-typescript',
         'plugin:react/recommended',
         'plugin:i18next/recommended',
-        'plugin:storybook/recommended'
     ],
     overrides: [
         {

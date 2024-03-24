@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'
 
 import App from 'app/App'
-import ThemeProvider from 'app/providers/themeProvider/ui/ThemeProvider'
 
 import { ErrorPage } from 'pages/ErrorPage'
 
@@ -22,9 +21,7 @@ root.render(
     <React.StrictMode>
         <BrowserRouter>
             <ErrorBoundary fallback={<ErrorPage/>}>
-                <ThemeProvider>
                     <App />
-                </ThemeProvider>
             </ErrorBoundary>
         </BrowserRouter>
     </React.StrictMode>

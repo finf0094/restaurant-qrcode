@@ -1,0 +1,25 @@
+$themes: (
+        light: (
+                bg-color: #FFFFFF,
+                wrapper-color: #f6f5fb,
+                primary-blue: #22b5e9,
+                primary-green: #1caa19,
+                primary-red: #f12137,
+                primary-dark: #1a202c,
+                scrollbar-track-color: #e0f2fe,
+                scrollbar-thumb-color: #90cdf4,
+                overlay-color: rgba(0 0 0 / 60%),
+        ),
+        dark: (
+        ),
+);
+
+@mixin spread-theme-variables($theme: 'dark') {
+  @each $color, $value in map-get($themes, $theme) {
+    --#{$color}: #{$value};
+  }
+}
+
+:root {
+  @include spread-theme-variables('light');
+}

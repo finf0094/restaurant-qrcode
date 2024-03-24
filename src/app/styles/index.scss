@@ -1,23 +1,16 @@
-@import "reset";
-@import "variables/global";
-@import "themes/dark";
-@import "themes/normal";
-@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap';
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+@import 'colors';
+@import 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap';
 
 .app {
   font: var(--font-m);
-  background: var(--bg-color);
   color: var(--primary-color);
-  min-height: 100vh;
-  font-family: Montserrat, sans-serif;
   font-weight: 500;
 }
 
 .content-page {
+  margin-top: px-to-rem(30px);
   display: flex;
-}
-
-.page-wrapper {
-  flex-grow: 1;
-  padding: 20px;
 }

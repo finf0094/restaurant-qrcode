@@ -1,18 +1,110 @@
+@use 'sass:map';
+@use 'sass:color';
+
+$colors: (
+        'primary': var(--primary-blue),
+        'success': var(--primary-green),
+        'error': var(--primary-red),
+        'dark': var(--primary-dark),
+        'white': var(--bg-color)
+);
+
+@mixin buttonColor($colorName) {
+  $colorValue: map.get($colors, $colorName);
+  $textColor: if($colorName == 'white', var(--primary-dark), white);
+
+  &.#{$colorName} {
+    &.outlined,
+    &.clear {
+      color: $colorValue;
+      border-color: $colorValue;
+
+      &:hover {
+        background-color: $colorValue;
+        color: $textColor;
+        border-color: $colorValue;
+      }
+    }
+  }
+}
+
+@mixin buttonFill($colorName) {
+  $colorValue: map.get($colors, $colorName);
+  $textColor: if($colorName == 'white', var(--primary-dark), white);
+
+  &.#{$colorName} {
+    &.fill {
+      background-color: $colorValue;
+      color: $textColor;
+
+      &:hover {
+        background-color: var(--primary-dark);
+        color: white;
+      }
+    }
+  }
+}
+
 .Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
   cursor: pointer;
-}
-
-.clear {
-  padding: 0;
-  margin: 0;
   border: none;
-  background: none;
-  outline: none;
+  border-radius: 7px;
+  font-weight: 500;
+  transition:
+          background-color 0.3s,
+          color 0.3s,
+          border-color 0.3s;
+  @include padding(18px, 50px);
+  font-family: var(--font-family-main);
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &.small {
+    @include padding(10px, 25px);
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
+  }
+
+  &.medium {
+    @include padding(18px, 50px);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+  }
+
+  &.large {
+    @include padding(26px, 70px);
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-l);
+  }
+
+  &.outlined,
+  &.clear,
+  &.fill {
+    background: none;
+    outline: none;
+    border: none;
+
+    @each $name, $color in $colors {
+      @include buttonColor($name);
+      @include buttonFill($name);
+    }
+  }
+
+  &.outlined {
+    border: 2px solid transparent;
+  }
 }
 
-.outline {
-  padding: 15px;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-  background: none;
+.startIcon,
+.endIcon {
+  display: flex;
+  align-items: center;
 }

@@ -1,0 +1,23 @@
+{
+  "Buttons colors": "Buttons colors",
+  "primary": "primary",
+  "error": "error",
+  "success": "success",
+  "white": "white",
+  "dark": "dark",
+  "Buttons sizes": "Buttons sizes",
+  "small": "small",
+  "medium": "medium",
+  "large": "large",
+  "Buttons variants": "Buttons variants",
+  "outlined": "outlined",
+  "fill": "fill",
+  "clear": "clear",
+  "Typography size": "Typography size",
+  "Size S": "Size S",
+  "Size M": "Size M",
+  "Size L": "Size L",
+  "Size XL": "Size XL",
+  "Typography font-weight": "Typography font-weight",
+  "Компонент Typography внутри Button": "Компонент Typography внутри Button"
+}

@@ -1,4 +1,4 @@
-import { useCallback, type FC, memo } from 'react';
+import { type FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
@@ -67,9 +67,7 @@ const LoginForm: FC<LoginFormProps> = memo(({ className, onSuccess }) => {
         <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <span>
-                    Для получения доступа в платформу введите пожалуйста свой
-                    логин и пароль ниже
-                </span>
+                    {t('Для получения доступа в платформу введите пожалуйста свой логин и пароль ниже')}</span>
                 <input type="text" value={username} />
                 <input type="text" value={password} />
                 <Button disabled={isLoading} onClick={onLoginClick}>

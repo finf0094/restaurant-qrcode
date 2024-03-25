@@ -11,7 +11,8 @@
     "prettier": "npx prettier --write **/*.{ts,tsx,json}",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
-    "generate:slice": "node ./scripts/createSlice/index.js"
+    "generate:slice": "node ./scripts/createSlice/index.js",
+    "localize": "ts-node ./scripts/i18n/localizeText.ts && ts-node ./scripts/i18n/addLocalizedTextToLocales.ts"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [

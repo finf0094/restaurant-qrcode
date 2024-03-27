@@ -6,9 +6,9 @@ import cls from './Typography.module.scss';
 
 interface TypographyProps {
     component?: keyof React.ReactHTML
-    size?: 's' | 'm' | 'l' | 'xl'
+    size?: 's' | 'm' | 'l' | 'xxl'
     fw?: 'regular' | 'medium' | 'bold' | 'semibold'
-    color?: 'primary' | 'success' | 'error' | 'dark' | 'white'
+    color?: 'primary' | 'dark' | 'white'
     className?: string
     style?: CSSProperties
     children: ReactNode

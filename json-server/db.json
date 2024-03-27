@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sate Madura",
+      "price": 5,
+      "count": 5
+    },
+    {
+      "id": 2,
+      "name": "Salad Salmon",
+      "price": 20,
+      "count": 0
+    },
+    {
+      "id": 3,
+      "name": "Basso Ayam",
+      "price": 15,
+      "count": 20
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "tableNumber": 1,
+      "items": {
+        "product_id": 1,
+        "quantity": 2
+      }
+    },
+    {
+      "id": 1,
+      "tableNumber": 2,
+      "items": {
+        "product_id": 1,
+        "quantity": 2
+      }
+    },
+    {
+      "id": 1,
+      "tableNumber": 3,
+      "items": {
+        "product_id": 1,
+        "quantity": 2
+      }
+    }
+  ]
+}

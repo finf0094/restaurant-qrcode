@@ -8,8 +8,8 @@
     &.l {
         font: var(--font-l);
     }
-    &.xl {
-        font: var(--font-xl);
+    &.xxl {
+        font: var(--font-xxl);
     }
     &.regular {
         font-weight: 400;
@@ -24,18 +24,12 @@
         font-weight: 600;
     }
     &.primary {
-        color: var(--primary-blue);
-    }
-    &.success {
         color: var(--primary-green);
-    }
-    &.error {
-        color: var(--primary-red);
     }
     &.dark {
         color: var(--primary-dark);
     }
     &.white {
-      color: white;
+      color: var(--primary-white);
     }
 }

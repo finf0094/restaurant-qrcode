@@ -1,0 +1,13 @@
+.BottomNavigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--primary-white);
+  padding: 15px;
+  border-top: 1px solid var(--primary-gray);
+
+  .active svg {
+    fill: var(--primary-blue);
+  }
+}

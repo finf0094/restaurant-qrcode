@@ -1,0 +1,23 @@
+.AppLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active {
+  color: var(--primary-blue);
+}
+
+.startIcon,
+.endIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  color: var(--primary-gray);
+
+  &.active {
+    color: var(--primary-blue);
+  }
+}

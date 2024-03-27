@@ -4,11 +4,7 @@
 @import "styles/mixins";
 
 $colors: (
-        'primary': var(--primary-blue),
-        'success': var(--primary-green),
-        'error': var(--primary-red),
-        'dark': var(--primary-dark),
-        'white': var(--bg-color)
+        'primary': var(--primary-green),
 );
 
 @mixin buttonColor($colorName) {

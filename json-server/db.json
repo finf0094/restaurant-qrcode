@@ -1,48 +1,116 @@
 {
+  "categories": [
+    {
+      "id": 1,
+      "name": "Main Dishes"
+    },
+    {
+      "id": 2,
+      "name": "Salads"
+    },
+    {
+      "id": 3,
+      "name": "Soups"
+    }
+  ],
   "products": [
     {
       "id": 1,
       "name": "Sate Madura",
       "price": 5,
-      "count": 5
+      "count": 5,
+      "rating": 5,
+      "imageUrl": "https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/02/Resep-Sate-Ayam-Madura.jpg?fit=1920%2C1804&ssl=1",
+      "category": {
+        "id": 1,
+        "name": "Main Dishes"
+      }
     },
     {
       "id": 2,
       "name": "Salad Salmon",
       "price": 20,
-      "count": 0
+      "count": 0,
+      "rating": 5,
+      "imageUrl": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/07/Salmon-Avocado-Salad-6.jpg",
+      "category": {
+        "id": 1,
+        "name": "Main Dishes"
+      }
     },
     {
       "id": 3,
       "name": "Basso Ayam",
       "price": 15,
-      "count": 20
+      "count": 20,
+      "rating": 5,
+      "imageUrl": "https://petramarkcare.weebly.com/uploads/6/3/7/6/63763363/resep-membuat-soto-ayam-lezat_orig.jpg",
+      "category": {
+        "id": 1,
+        "name": "Main Dishes"
+      }
     }
   ],
   "orders": [
     {
       "id": 1,
       "tableNumber": 1,
-      "items": {
-        "product_id": 1,
-        "quantity": 2
-      }
+      "items": [
+        {
+          "product": {
+            "id": 1,
+            "name": "Sate Madura",
+            "price": 5,
+            "count": 5,
+            "rating": 5,
+            "category": {
+              "id": 1,
+              "name": "Main Dishes"
+            }
+          },
+          "quantity": 2
+        }
+      ]
     },
     {
-      "id": 1,
+      "id": 2,
       "tableNumber": 2,
-      "items": {
-        "product_id": 1,
-        "quantity": 2
-      }
+      "items": [
+        {
+          "product":  {
+            "id": 2,
+            "name": "Salad Salmon",
+            "price": 20,
+            "count": 0,
+            "rating": 5,
+            "category": {
+              "id": 1,
+              "name": "Main Dishes"
+            }
+          },
+          "quantity": 2
+        }
+      ]
     },
     {
-      "id": 1,
+      "id": 3,
       "tableNumber": 3,
-      "items": {
-        "product_id": 1,
-        "quantity": 2
-      }
+      "items": [
+        {
+          "product":   {
+            "id": 3,
+            "name": "Basso Ayam",
+            "price": 15,
+            "count": 20,
+            "rating": 5,
+            "category": {
+              "id": 1,
+              "name": "Main Dishes"
+            }
+          },
+          "quantity": 2
+        }
+      ]
     }
   ]
 }

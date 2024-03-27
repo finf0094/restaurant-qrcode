@@ -1,7 +1,7 @@
 import type { AppRoutesProps } from '@/shared/types/router';
 import {
-    AppRoutes,
-    getRouteMain,
+    AppRoutes, getRouteBasket,
+    getRouteMain, getRouteQRCode,
 } from '@/shared/const/router';
 
 import { MainPage } from "@/pages/MainPage";
@@ -12,6 +12,15 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         path: getRouteMain(),
         element: <MainPage />,
     },
+    [AppRoutes.BASKET]: {
+        path: getRouteBasket(),
+        element: <MainPage />,
+    },
+    [AppRoutes.QR_CODE]: {
+        path: getRouteQRCode(),
+        element: <MainPage />,
+    },
+
 
     [AppRoutes.NOT_FOUND]: {
         path: '*',

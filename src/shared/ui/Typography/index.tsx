@@ -1,17 +1,15 @@
-import React, {
-    ReactNode, CSSProperties, memo,
-} from 'react';
+import React, { ReactNode, CSSProperties, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames';
 import cls from './Typography.module.scss';
 
 interface TypographyProps {
-    component?: keyof React.ReactHTML
-    size?: 's' | 'm' | 'l' | 'xxl'
-    fw?: 'regular' | 'medium' | 'bold' | 'semibold'
-    color?: 'primary' | 'dark' | 'white'
-    className?: string
-    style?: CSSProperties
-    children: ReactNode
+    component?: keyof React.ReactHTML;
+    size?: 's' | 'm' | 'l' | 'xxl';
+    fw?: 'regular' | 'medium' | 'bold' | 'semibold';
+    color?: 'primary' | 'dark' | 'white' | 'gray';
+    className?: string;
+    style?: CSSProperties;
+    children: ReactNode;
 }
 
 const Typography = memo((props: TypographyProps) => {
@@ -33,7 +31,11 @@ const Typography = memo((props: TypographyProps) => {
     };
 
     return (
-        <Component className={classNames(cls.typography, mods, [className])} {...otherProps} style={style}>
+        <Component
+            className={classNames(cls.typography, mods, [className])}
+            {...otherProps}
+            style={style}
+        >
             {children}
         </Component>
     );

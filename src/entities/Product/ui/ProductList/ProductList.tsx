@@ -1,11 +1,9 @@
 import React, { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames';
 import Typography from '@/shared/ui/Typography';
-import { useTranslation } from 'react-i18next';
-import { Skeleton } from '@/shared/ui/Skeleton';
 import { VStack } from '@/shared/ui/Stack';
 
-import { useProducts } from '../../api/productApi';
 import { ProductItem } from '../ProductItem/ProductItem';
 import { ProductItemSkeleton } from '../ProductItem/ProductItemSkeleton';
 
@@ -18,7 +16,7 @@ interface ProductListProps {
     products: Product[];
 }
 
-export const getProductListSkeleton = (count = 10) => (
+export const getProductListSkeleton = (count = 9) => (
     <VStack>
         {Array.from({ length: count }, (_, index) => (
             <ProductItemSkeleton key={index} />

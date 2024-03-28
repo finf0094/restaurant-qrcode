@@ -1,0 +1,16 @@
+.Tabs {
+  position: relative;
+  font-weight: 600;
+  font-size: var(--font-line-s);
+}
+
+.Tab {
+  cursor: pointer;
+  padding: 12px 13px;
+  background: var(--primary-white);
+  border-radius: 18px;
+}
+
+.active {
+  color: var(--primary-blue);
+}

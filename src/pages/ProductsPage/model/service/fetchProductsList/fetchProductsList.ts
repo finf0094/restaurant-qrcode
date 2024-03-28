@@ -17,7 +17,7 @@ export const fetchProductsList = createAsyncThunk<
     Product[],
     FetchProductsListProps,
     ThunkConfig<string>
->('articlesPage/fetchArticlesList', async (props, thunkApi) => {
+>('productsPage/fetchProductsList', async (props, thunkApi) => {
     const { extra, rejectWithValue, getState } = thunkApi;
     const limit = getProductsPageLimit(getState());
     const search = getProductsPageSearch(getState());
@@ -26,14 +26,14 @@ export const fetchProductsList = createAsyncThunk<
 
     try {
         addQueryParams({
-            category: category.name,
+            category: category?.name,
         });
         const response = await extra.api.get<Product[]>('/products', {
             params: {
                 _expand: 'user',
                 _limit: limit,
                 _page: page,
-                _category: category.id,
+                'category.id': category?.id,
                 q: search,
             },
         });

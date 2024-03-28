@@ -15,4 +15,4 @@ export const getProductsPageInited = (state: StateSchema) =>
 export const getProductsPageSearch = (state: StateSchema) =>
     state.productsPage?.search ?? '';
 export const getProductsPageCategory = (state: StateSchema) =>
-    state.productsPage?.category ?? { id: 1, name: 'ALL' };
+    state.productsPage?.category;

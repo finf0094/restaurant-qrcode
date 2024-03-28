@@ -11,6 +11,14 @@
     {
       "id": 3,
       "name": "Soups"
+    },
+    {
+      "id": 4,
+      "name": "Seafood"
+    },
+    {
+      "id": 5,
+      "name": "Cake"
     }
   ],
   "products": [
@@ -48,6 +56,90 @@
       "category": {
         "id": 1,
         "name": "Main Dishes"
+      }
+    },
+    {
+      "id": 4,
+      "name": "beef",
+      "price": 25,
+      "count": 5,
+      "rating": 4,
+      "imageUrl": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/12/14/1/DVSP05H_mongolian-beef_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1614361440646.jpeg",
+      "category": {
+        "id": 1,
+        "name": "Main Dishes"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Bacon",
+      "price": 22,
+      "count": 3,
+      "rating": 4,
+      "imageUrl": "https://www.allrecipes.com/thmb/0nZqI2sFPUEwEarCXoLz5Xr9igo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/269960-air-fryer-bacon-ddmfs-4x3-step3-1100-3c39fd4369d64104b4e24e6a7aa7dbb3.jpg",
+      "category": {
+        "id": 1,
+        "name": "Main Dishes"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Ribs",
+      "price": 15,
+      "count": 2,
+      "rating": 3,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Cote_de_boeuf_p1040932.jpg/480px-Cote_de_boeuf_p1040932.jpg",
+      "category": {
+        "id": 1,
+        "name": "Main Dishes"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Salmon",
+      "price": 15,
+      "count": 2,
+      "rating": 5,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Sashimi_-_Maguro_Restaurant%2C_Bangna%2C_Bangkok_%2844856596864%29.jpg/480px-Sashimi_-_Maguro_Restaurant%2C_Bangna%2C_Bangkok_%2844856596864%29.jpg",
+      "category": {
+        "id": 4,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Cheesecake",
+      "price": 10,
+      "count": 2,
+      "rating": 5,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/My_first_cheesecake_cropped.jpg/480px-My_first_cheesecake_cropped.jpg",
+      "category": {
+        "id": 5,
+        "name": "Cake"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Chocolate cake",
+      "price": 13,
+      "count": 5,
+      "rating": 5,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Chocolate_fudge_cake.jpg/359px-Chocolate_fudge_cake.jpg",
+      "category": {
+        "id": 5,
+        "name": "Cake"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Carrot cake",
+      "price": 15,
+      "count": 5,
+      "rating": 5,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Carrot_cake_at_America_Graffiti_%28cropped%29.jpg/480px-Carrot_cake_at_America_Graffiti_%28cropped%29.jpg",
+      "category": {
+        "id": 5,
+        "name": "Cake"
       }
     }
   ],

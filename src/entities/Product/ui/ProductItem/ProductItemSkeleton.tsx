@@ -3,24 +3,47 @@ import { HStack, VStack } from '@/shared/ui/Stack';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import cls from './ProductItem.module.scss';
 
-export const ProductItemSkeleton = memo(() => {
+interface ProductItemSkeletonProps {
+    className?: string;
+}
+
+export const ProductItemSkeleton: React.FC<ProductItemSkeletonProps> = memo(({ className }) => {
     return (
-        <HStack className={cls.foodItem} align="center" gap="8">
-            <Skeleton
-                className={cls.foodImage}
-                width="50px"
-                height="50px"
-                border="8px"
-            />
-            <VStack gap="4">
-                <Skeleton width="70%" height="20px" />
-                <Skeleton width="50%" height="20px" />
-                <HStack gap="4">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                        <Skeleton key={index} width="10px" height="10px" />
-                    ))}
-                </HStack>
-            </VStack>
+        <HStack
+            className={cls.productItem}
+            align='center'
+            gap='8'
+            max
+            justify='between'
+        >
+            <HStack gap='16'>
+                <Skeleton
+                    className={cls.productImage}
+                    height='80px'
+                    width='80px'
+                    border='8px'
+                />
+                <VStack gap='4'>
+                    <Skeleton
+                        height='18px'
+                        width='103px'
+                    />
+                    <Skeleton
+                        height='16px'
+                        width='25px'
+                    />
+                </VStack>
+            </HStack>
+            <div className={cls.rating}>
+                {Array.from({ length: 5 }).map((_, index) => (
+                    <Skeleton
+                        key={index}
+                        height='17px'
+                        width='17px'
+                        className={cls.emptyStar}
+                    />
+                ))}
+            </div>
         </HStack>
     );
 });

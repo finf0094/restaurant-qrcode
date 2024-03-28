@@ -33,7 +33,7 @@ export const ProductItem: React.FC<ProductItemProps> = memo((props) => {
             align="center"
             gap="8"
             max
-            justify="around"
+            justify="between"
         >
             <HStack gap="16">
                 <AppImage
@@ -48,7 +48,8 @@ export const ProductItem: React.FC<ProductItemProps> = memo((props) => {
                     <Typography
                         size="m"
                         color="gray"
-                    >{`$${item.price}`}</Typography>
+                    >{`$${item.price}`}
+                    </Typography>
                 </VStack>
             </HStack>
             <div className={cls.rating}>{renderStars()}</div>

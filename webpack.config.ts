@@ -1,8 +1,12 @@
-import type webpack from 'webpack'
+import type webpack from 'webpack';
 
-import { buildWebpackConfig } from './config/build/buildWebpackConfig'
-import {type BuildEnv, type BuildMode, type BuildPaths} from './config/build/types/config'
-import path from 'path'
+import { buildWebpackConfig } from './config/build/buildWebpackConfig';
+import {
+    type BuildEnv,
+    type BuildMode,
+    type BuildPaths,
+} from './config/build/types/config';
+import path from 'path';
 
 function getApiUrl(mode: BuildMode, apiUrl?: string) {
     if (apiUrl) {
@@ -12,7 +16,7 @@ function getApiUrl(mode: BuildMode, apiUrl?: string) {
         return '/api';
     }
 
-    return 'http://localhost:8000';
+    return 'http://192.168.1.103:8000';
 }
 
 export default (env: BuildEnv) => {
@@ -23,7 +27,7 @@ export default (env: BuildEnv) => {
         src: path.resolve(__dirname, 'src'),
         locales: path.resolve(__dirname, 'public', 'locales'),
         buildLocales: path.resolve(__dirname, 'build', 'locales'),
-    }
+    };
 
     const mode = env?.mode || 'development';
     const PORT = env?.port || 3000;
@@ -36,8 +40,8 @@ export default (env: BuildEnv) => {
         paths,
         isDev,
         apiUrl,
-        port: PORT
-    })
+        port: PORT,
+    });
 
-    return config
-}
+    return config;
+};
